@@ -16,8 +16,7 @@ from django.core import serializers
 def test(request):
     get_param = request.GET['name']
     get_param2 = request.GET['level']
-    return HttpResponse(str("Name: " +  get_param + ", level: " + get_param2))
-
+    return HttpResponse("honononono")
 
 
 def register(request):
