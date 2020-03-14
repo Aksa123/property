@@ -14,7 +14,12 @@ from django.core import serializers
 # Create your views here.
 
 def test(request):
-   return HttpResponse("oh no it got deleted!")
+    name = "default name"
+    level = 0
+    if "name" in request.GET and "level" in request.GET:
+        name = request.GET['name']
+        level = request.GET['level']
+    return HttpResponse(str("THIS IS FROM NEW1 BRANCH - " + "name: " + name + ", level: " + str(level)))
 
 
 def register(request):
