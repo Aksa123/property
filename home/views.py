@@ -14,9 +14,12 @@ from django.core import serializers
 # Create your views here.
 
 def test(request):
-    get_param = request.GET['name']
-    get_param2 = request.GET['level']
-    return HttpResponse("honononono")
+    name = "default name"
+    level = 0
+    if "name" in request.GET or "level" in request.GET:
+        name = request.GET['name']
+        level = request.GET['level']
+    return HttpResponse(str("name: " + name, ", level: " + level))
 
 
 def register(request):
