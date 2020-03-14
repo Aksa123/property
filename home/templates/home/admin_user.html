@@ -1,0 +1,44 @@
+{% extends 'home/admin_base.html' %}
+
+{% block content %}
+            <h2>User list</h2>
+            <a class="btn btn-primary" href="{% url 'admin_add_user' %}" role="button">Add</a>
+            <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.userprofile.phone }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.userprofile.role }}</td>
+                        <td><img src="{{ user.userprofile.absolute_url }}" class="rounded size" alt="Cinque Terre"> </td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'admin_edit_user' user.id %}" role="button">Edit</a>
+                            <form action="{% url 'admin_delete_item' %}" method="POST">
+                                <input type="hidden" value={{ user.id }} name="id">
+                                <input type="hidden" value='user' name="kind">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </p>
+            
+
+{% endblock content %}

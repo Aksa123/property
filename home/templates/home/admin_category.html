@@ -1,0 +1,35 @@
+{% extends 'home/admin_base.html' %}
+
+{% block content %}
+            <h2>Category list</h2>
+            <a class="btn btn-primary" href="{% url 'admin_add_category' %}" role="button">Create</a>
+            <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cat in categories %}
+                        <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ cat.name }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'admin_edit_category' cat.id %}" role="button">Edit</a>
+                            <form action="{% url 'admin_delete_item' %}" method="POST" class="form-inline">
+                                <input type="hidden" value={{ cat.id }} name="id">
+                                <input type="hidden" value='category' name="kind">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </p>
+            
+
+{% endblock content %}

@@ -1,0 +1,154 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+	<!-- Page top section -->
+	{% load static %}
+	<section class="page-top-section single-blog set-bg " data-setbg="{% static 'home/img/page-top-bg.jpg' %}">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-xl-8 offset-lg-2">
+					<h2>{{ blog.title }}</h2>
+					<a href=""><i class="fa fa-user"></i>{{ blog.user.username }}</a>
+					<a href=""><i class="fa fa-clock-o"></i>{{ blog.date }}</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--  Page top end -->
+
+	<!-- Breadcrumb -->
+	<div class="site-breadcrumb">
+		<div class="container">
+			<a href="{% url 'home' %}"><i class="fa fa-home"></i>Home</a>
+			<span><i class="fa fa-angle-right"></i>Blog Details</span>
+		</div>
+	</div>
+
+	<!-- page -->
+	<section class="page-section single-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 blog-share">
+					<h5>Share</h5>
+					<div class="share-links">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+						<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+						<a href="#" class="pin"><i class="fa fa-thumb-tack"></i></a>
+					</div>
+				</div>
+				<div class="col-md-10 singel-blog-content">
+					<img src="{{ blog.absolute_url }}" alt="">
+					{{ blog.content|safe }}
+					<div class="blog-tags">
+						<p>Tag:</p>
+						<a href="#">#news,</a>
+						<a href="#">#realestate,</a>
+						<a href="#">#investment,</a>
+						<a href="#"> #price,</a>
+						<a href="#">#market</a>
+					</div>
+					<div class="post-author">
+						<div class="pa-thumb set-bg" data-setbg="{{ blog.user.userprofile.absolute_url }}"></div>
+						<div class="pa-content">
+							<h4>{{ blog.user.username }}</h4>
+							<p>Mauris lectus justo, tempor ac auctor at, congue id erat. Pellentesque et massa odio. Fusce vel fermentum tortor, nec gravida ligula. Vivamus at malesuada tortor, in posuere ex. Nani kore???</p>
+						</div>
+					</div>
+					<div class="comment-warp">
+						<h4 class="comment-title"><span id="number-of-comments">{{ numbers }}</span> Comments</h4>
+						<ul class="comment-list" id="comment_list">
+							{% comment %} <li>
+								<div class="comment">
+									<div class="comment-avator set-bg" data-setbg="{% static 'home/img/blog/comment/1.jpg' %}"></div>
+									<div class="comment-content">
+										<h5>Lucia Mendes <span>24 Mar 2018</span></h5>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. finibus eros eget purus vulputate, sit amet ornare ipsum. Ut enim ad minim veniam. Donec tincidunt sem non odio congue.</p>
+										<a href="#" class="c-btn">Like</a>
+										<button class="c-btn">Reply</button>
+									</div>
+								</div>
+								<ul class="replay-comment-list">
+									<li>
+										<div class="comment">
+											<div class="comment-avator set-bg" data-setbg="{% static 'home/img/blog/comment/2.jpg' %}"></div>
+											<div class="comment-content">
+												<h5>Peter Simon<span>25 Jun 2018</span></h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore iron man dolore magna aliqua. fpurus vulputate, sit amet ornare ipsum. Ut enim ad minim veniam. Donec tincidunt sem non odio congue.</p>
+												<a href="" class="c-btn">Like</a>
+												<button class="c-btn">Reply</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li> {% endcomment %}
+							{% for comment in comments %}
+							<li>
+								<div class="comment">
+									<div class="comment-avator set-bg" data-setbg="{{ comment.user.userprofile.absolute_url }}"></div>
+									<div class="comment-content">
+										<h5>{{ comment.user }}<span>#{{comment.id}} - {{ comment.dateformat }}</span></h5>
+										<p>{{ comment.content|safe }}</p>
+										{% comment %} <a href="#" class="c-btn">Like</a> {% endcomment %}
+										<button class="c-btn">Reply</button>
+										<input type='hidden' class='main' value=0>
+										<input type='hidden' class='user' value={{ comment.user }}>
+										<input type='hidden' class='comment-id' value={{ comment.id }}>
+									</div>
+								</div>
+								<ul class="replay-comment-list">
+								{% if comment.replies|length > 0 %}
+									{% for reply in comment.replies %}
+										<li>
+											<div class="comment">
+												<div class="comment-avator set-bg" data-setbg="{{ reply.user.userprofile.absolute_url }}"></div>
+												<div class="comment-content">
+													<h5>{{ reply.user }}<span>#{{ reply.id }} - {{ reply.dateformat }}</span></h5>
+													<p>{{ reply.content|safe }}</p>
+													{% comment %} <a href="#" class="c-btn">Like</a> {% endcomment %}
+													<button class="c-btn">Reply</button>
+													<input type='hidden' class='main' value={{ comment.id }}>
+													<input type='hidden' class='user' value={{ reply.user }}>
+													<input type='hidden' class='comment-id' value={{ reply.id }}>
+												</div>
+											</div>
+										</li>
+									{% endfor %}
+								{% endif %}
+								</ul>
+							</li>
+							{% endfor %}
+						</ul>
+						<div class="comment-form-warp">
+							<h4 class="comment-title">Leave Your Comment</h4>
+							{% if user.is_authenticated %}
+							<form class="comment-form" method="POST" id="comment-form">
+								<div class="row">
+									<input type='hidden' name='blog_id' value={{blog.id}} >
+									<input type='hidden' name='parent' value=0>
+									<input type='hidden' name='main' value=0>
+									{% csrf_token %}
+									<div class="col-lg-9">
+										<textarea placeholder="Your Message" name="content"></textarea>
+										<button type='submit' class="site-btn">SEND COMMENT</button>
+									</div>
+								</div>
+							</form>
+							<script src="{% static 'home/js/aksa3.js' %}"></script>
+							{% else %}
+							<button class="site-btn"><a href="{% url 'user_login' %}">LOGIN TO COMMENT</a></button>
+							{% endif %}
+
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- page end-->
+       
+
+{% endblock content %}

@@ -1,0 +1,131 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+	{% load static %}
+	<!-- Page top section -->
+	<section class="page-top-section set-bg" data-setbg="{% static 'home/img/page-top-bg.jpg' %}">
+		<div class="container text-white">
+			<h2>{{ property.status }}</h2>
+		</div>
+	</section>
+	<!--  Page top end -->
+
+	<!-- Breadcrumb -->
+	<div class="site-breadcrumb">
+		<div class="container">
+			<a href=""><i class="fa fa-home"></i>Home</a>
+			<span><i class="fa fa-angle-right"></i>Property Detail</span>
+		</div>
+	</div>
+
+	<!-- Page -->
+	<section class="page-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 single-list-page">
+					<div class="single-list-slider owl-carousel" id="sl-slider">
+						<div class="sl-item set-bg" data-setbg="{{ property.absolute_url }}">
+						</div>
+						{% for image in images %}
+							<div class="sl-item set-bg" data-setbg="{{ image.absolute_url }}">
+							</div>
+						{% endfor %}
+						
+					</div>
+					<div class="owl-carousel sl-thumb-slider" id="sl-slider-thumb">
+						<div class="sl-thumb set-bg" data-setbg="{{ property.absolute_url }}"></div>
+						{% for image in images %}
+							<div class="sl-thumb set-bg" data-setbg="{{ image.absolute_url }}"></div>
+						{% endfor %}
+					</div>
+					<div class="single-list-content">
+						<div class="row">
+							<div class="col-xl-8 sl-title">
+								<h2>{{ property.name }}</h2>
+								<p><i class="fa fa-map-marker"></i>{{ property.address }}, {{ property.city }}</p>
+							</div>
+							<div class="col-xl-4">
+								<a href="#" class="price-btn">${{ property.price }}</a>
+							</div>
+						</div>
+						<h3 class="sl-sp-title">Property Details</h3>
+						<div class="row property-details-list">
+							<div class="col-md-4 col-sm-6">
+								<p><i class="fa fa-th-large"></i> {{ property.area }} Square foot</p>
+								<p><i class="fa fa-bed"></i> {{ property.bedroom }} Bedrooms</p>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<p><i class="fa fa-car"></i>
+								{% if property.garage %}
+									Has garage
+								{% else %}
+									No garage
+								{% endif %}
+								</p>
+								<p><i class="fa fa-building-o"></i> {{ property.category }}</p>
+							</div>
+							<div class="col-md-4">
+								<p><i class="fa fa-bath"></i> {{ property.bathroom }} Bathrooms</p>
+								<p><i class="fa fa-user"></i> {{ property.user.username }}</p>
+							</div>
+						</div>
+						<h3 class="sl-sp-title">Description</h3>
+						<div class="description">
+							{{ property.description|safe }}
+						</div>
+						
+						
+						<h3 class="sl-sp-title bd-no">Location</h3>
+							<iframe src="{{ property.google_map }}" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						<div class="pos-map" id="map-canvas"></div>
+					</div>
+				</div>
+				<!-- sidebar -->
+				<div class="col-lg-4 col-md-7 sidebar">
+					<div class="author-card">
+						<div class="author-img set-bg" data-setbg="{{ property.user.userprofile.absolute_url }}"></div>
+						<div class="author-info">
+							<h5>{{ property.user.username }}</h5>
+							<p>Owner</p>
+						</div>
+						<div class="author-contact">
+							<p><i class="fa fa-phone"></i> {{ property.user.userprofile.phone }}</p>
+							<p><i class="fa fa-envelope"></i> {{ property.user.email }}</p>
+						</div>
+					</div>
+					<div class="contact-form-card">
+						<h5>Do you have any question?</h5>
+						<form>
+							<input type="text" placeholder="Your name">
+							<input type="text" placeholder="Your email">
+							<textarea placeholder="Your question"></textarea>
+							<button>SEND</button>
+						</form>
+					</div>
+					<div class="related-properties">
+						<h2>Related Properties</h2>
+						{% for related in related_properties %}
+							<div class="rp-item">
+								<div class="rp-pic set-bg" data-setbg="{{ related.absolute_url }}">
+									<div class="sale-notic">{{ related.status }}</div>
+								</div>
+								<div class="rp-info">
+									<h5>{{ related.address }}</h5>
+									<p><i class="fa fa-map-marker"></i>{{ related.city }}</p>
+								</div>
+								<a href="{% url 'property_detail' related.id %}" class="rp-price">${{ related.price }}</a>
+							</div>
+						{% endfor %}
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Page end -->
+
+
+	
+
+
+{% endblock content %}

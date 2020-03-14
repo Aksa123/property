@@ -1,0 +1,111 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+
+	<!-- Page top section -->
+	{% load static %}
+	<section class="page-top-section set-bg" data-setbg="{% static 'home/img/page-top-bg.jpg' %}">
+		<div class="container text-white">
+			<h2>Blog grid</h2>
+		</div>
+	</section>
+	<!--  Page top end -->
+
+	<!-- Breadcrumb -->
+	<div class="site-breadcrumb">
+		<div class="container">
+			<a href=""><i class="fa fa-home"></i>Home</a>
+			<span><i class="fa fa-angle-right"></i>Blog Grid</span>
+		</div>
+	</div>
+
+	<!-- page -->
+	<section class="page-section blog-page">
+		<div class="container">
+			<div id="map-canvas">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0964504034214!2d110.38660671529685!3d-7.779597494393396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59cf34fe12df%3A0xe0fbbf81bda890bc!2sSinergi%20coworking%20space!5e0!3m2!1sen!2sid!4v1583315233837!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			</div>
+			<div class="contact-info-warp">
+				<p><i class="fa fa-map-marker"></i>Jl. Cenderawasih No.32b, Demangan, Jogja</p>
+				<p><i class="fa fa-envelope"></i>aksa@mail.com</p>
+				<p><i class="fa fa-phone"></i>(+62) 813 1646 2152</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<img src="{% static 'home/img/contact.jpg' %}" alt="">
+				</div>
+				<div class="col-lg-6">
+					<div class="contact-right">
+						<div class="section-title">
+							<h3>Get in touch</h3>
+							<p>Browse houses and flats for sale and to rent in your area</p>
+						</div>
+						<form class="contact-form" id='message-form' method="POST" action="{% url 'contact-us'%}">
+							<div class="row">
+								<div class="col-md-6">
+									{{ form.name.label }}
+									{{ form.name }}
+								</div>
+								<div class="col-md-6">
+									{{ form.email.label }}
+									{{ form.email }}
+								</div>
+								<div class="col-md-12">
+									{{ form.content.label }}
+									{{ form.content }}
+									{% csrf_token %}
+									<button type='submit' class="site-btn">SUMMIT NOW</button>
+								</div>
+							</div>
+						</form>
+						
+							<script type="text/javascript">
+								var message_form = document.querySelector("#message-form")
+								message_form.addEventListener("submit", function(e){
+									e.preventDefault()
+									let name = message_form.querySelector("[name=name]").value
+									let email = message_form.querySelector("[name=email]").value
+									let content = message_form.querySelector("[name=content]").value
+									let csrf = message_form.querySelector("[name=csrfmiddlewaretoken]").value
+									let data = new FormData()
+									data.append("name", name)
+									data.append("email", email)
+									data.append("content", content)
+
+									fetch("/contact-us/", {
+										method: "POST",
+										headers: {
+											"X-CSRFToken": csrf
+										},
+										body: data
+									})
+									.then(function(response){
+										if (response.ok){
+											console.log("success!")
+										}
+										else{
+											console.log("response fails!")
+										}
+										return response.json()
+									})
+									.then(function(result){
+										let status = result.status
+										alert(status)
+										
+										message_form.querySelector("[name=name]").value = ""
+										message_form.querySelector("[name=email]").value = ""
+										message_form.querySelector("[name=content]").value = ""
+									})
+									.catch(function(error){
+										console.log(error)
+									})
+								})
+							</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- page end -->
+
+{% endblock content %}

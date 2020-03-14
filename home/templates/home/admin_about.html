@@ -1,0 +1,36 @@
+{% extends 'home/admin_base.html' %}
+
+{% block content %}
+            <h2>About list</h2>
+            <a class="btn btn-primary" href="{% url 'admin_add_about' %}" role="button">Create</a>
+            <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Preview</th>
+                    <th scope="col">Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ab in about %}
+                        <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ ab.preview }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'admin_edit_about' ab.id %}" role="button">Edit</a>
+                            <form action="{% url 'admin_delete_item' %}" method="POST" class="form-inline">
+                                <input type="hidden" value={{ ab.id }} name="id">
+                                <input type="hidden" value='about' name="kind">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </p>
+            
+
+{% endblock content %}

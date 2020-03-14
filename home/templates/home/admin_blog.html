@@ -1,0 +1,40 @@
+{% extends 'home/admin_base.html' %}
+
+{% block content %}
+            <h2>Blog list</h2>
+            <a class="btn btn-primary" href="{% url 'admin_add_blog' %}" role="button">Create</a>
+            <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for blog in blogs %}
+                        <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td><img src="{{ blog.absolute_url }}" class="rounded size" alt="Cinque Terre"></td>
+                        <td>{{ blog.title }}</td>
+                        <td>{{ blog.user.username }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'admin_edit_blog' blog.id %}" role="button">Edit</a>
+                            <form action="{% url 'admin_delete_item' %}" method="POST">
+                                <input type="hidden" value={{ blog.id }} name="id">
+                                <input type="hidden" value='blog' name="kind">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </p>
+            
+
+{% endblock content %}

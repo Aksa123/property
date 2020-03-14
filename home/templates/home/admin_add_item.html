@@ -1,0 +1,24 @@
+{% extends 'home/admin_base.html' %}
+
+{% block content %}
+            <h2>{{ title }}</h2>
+            <p>
+            <form action="{% url url %}" method="POST" enctype="multipart/form-data">
+                {% for input in form %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">{{ input.label }}</label>
+                        {{ input }}
+                    </div>
+                {% endfor %}
+                <input type="hidden" value="add" name="action">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <ol>
+
+            </p>
+
+            <div class="line"></div>
+
+
+{% endblock content %}

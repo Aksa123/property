@@ -1,0 +1,61 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+	<!-- Page top section -->
+	{% load static %}
+	<section class="page-top-section set-bg" data-setbg="{% static 'home/img/page-top-bg.jpg' %}">
+		<div class="container text-white">
+			<h2>Blog grid</h2>
+		</div>
+	</section>
+	<!--  Page top end -->
+
+	<!-- Breadcrumb -->
+	<div class="site-breadcrumb">
+		<div class="container">
+			<a href="{% url 'home' %}"><i class="fa fa-home"></i>Home</a>
+			<span><i class="fa fa-angle-right"></i>Blog Grid</span>
+		</div>
+	</div>
+
+	<!-- page -->
+	<section class="page-section blog-page">
+		<div class="container">
+			<div class="row">
+				<!-- blog post -->
+				{% for blog in blogs %}
+					<div class="col-lg-4 col-md-6 blog-item">
+						<img src="{{ blog.absolute_url }}" alt="">
+						<h5><a href="{% url 'blog_detail' blog.id%}">{{ blog.title }}</a></h5>
+						<div class="blog-meta">
+							<span><i class="fa fa-user"></i>{{ blog.user }}</span>
+							<span><i class="fa fa-clock-o"></i>{{ blog.date }}</span>
+						</div>
+						<p>{{ blog.content|safe|truncatechars_html:100 }}</p>
+					</div>
+				{% endfor %}
+				
+				
+			</div>
+			<div class="site-pagination">
+			{% if prev_page %}
+				<a href="{% url 'blog' prev_page %}"><i class="fa fa-angle-left"></i></a>
+			{% endif %}
+			{% for i in page_list %}
+				{% if i == page %}
+					<span>{{ i }}</span>
+				{% else %}
+					<a href="{% url 'blog' i %}">{{ i }}</a>
+				{% endif %}
+			{% endfor %}
+			{% if next_page %}
+				<a href="{% url 'blog'  next_page %}"><i class="fa fa-angle-right"></i></a>
+			{% endif %}
+			</div>
+		</div>
+	</section>
+	<!-- page end -->
+
+
+{% endblock content %}
