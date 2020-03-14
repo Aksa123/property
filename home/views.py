@@ -19,7 +19,7 @@ def test(request):
     if "name" in request.GET and "level" in request.GET:
         name = request.GET['name']
         level = request.GET['level']
-    return HttpResponse(str("NEW BRANCH - " + "name: " + name + ", level: " + str(level)))
+    return HttpResponse(str("THIS IS FROM NEW1 BRANCH - " + "name: " + name + ", level: " + str(level)))
 
 
 def register(request):
