@@ -13,7 +13,6 @@ urlpatterns = [
     path('contact-us/', views_class.ContactUs.as_view(), name='contact-us'),
 
     # Admin start
-    path('login/', views.user_login, name='user_login'),
     path('admin/', views.admin, name='admin'),
     path('admin/user/', views.admin_user, name='admin_user'),
     path('admin/user/add/', views.admin_add_user, name='admin_add_user'),
@@ -42,8 +41,9 @@ urlpatterns = [
     path('admin/about/edit/<int:id>/', views.admin_edit_about, name='admin_edit_about'),
     # Admin end
 
-    path('logout/', views.user_logout, name='user_logout'),
-    path('register/', views.register, name='user_register'),
+    path('login/', views_class.Login.as_view(), name='user_login'),
+    path('logout/', views_class.Logout.as_view(), name='user_logout'),
+    path('register/', views_class.Register.as_view(), name='user_register'),
 
     path('', views.home, name='home'),
     path('property/<int:id>/', views.property_detail, name='property_detail'),

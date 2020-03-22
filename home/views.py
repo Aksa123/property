@@ -33,7 +33,7 @@ def register(request):
         avatar = request.FILES['avatar']
         user = User.objects.filter(username=name) | User.objects.filter(email=email)
         if len(user) > 0:
-            return HttpResponse("account alrady exist !")
+            return HttpResponse("account already exist !")
         else:
             new_user = User.objects.create_user(username=name, email=email, password=password)
             new_profile = UserProfile(user=new_user, phone=phone, role=role, image=avatar)
