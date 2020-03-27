@@ -18,14 +18,52 @@
 	<!-- Filter form section -->
 	<div class="filter-search">
 		<div class="container">
-			<form class="filter-form" method="GET" action="{% url 'browse' %}">
-				<input type="text" name='text' placeholder="Enter a street name, address number or keyword">
-				<select name='filter'>
-					<option value="city">City</option>
-					<option value="category">Catagory</option>
+			<form class="filter-form" method="GET" action="http://127.0.0.1:8000/browse">
+				<label>City</label>
+				<select name='city'>
+					{% for city in cities %}
+					<option value={{ city.id }}>{{ city.name }}</option>
+					{% endfor %}
+				</select>
+				<label>Category</label>
+				<select name='category'>
+					{% for category in categories %}
+					<option value={{ category.id }}>{{ category.name }}</option>
+					{% endfor %}
 				</select>
 				<button type="submit" class="site-btn fs-submit">SEARCH</button>
 			</form>
+			<script>
+				var form = document.querySelector(".filter-form")
+				var city = form.querySelector("[name=city]")
+				var category = form.querySelector("[name=category]")
+				city.addEventListener("change", function(e){
+					let url = new URL(form.getAttribute("action"))
+					let params = new URLSearchParams(url.search)
+					if (params.get("city")){
+						params.set("city", city.value)
+					}
+					else{
+						params.append("city", city.value)
+					}
+					console.log(url)
+					console.log(params.get("city"))
+				})
+				category.addEventListener("change", function(e){
+					let url = new URL(form.getAttribute("action"))
+					let params = new URLSearchParams(url.search)
+					if (params.get("category")){
+						params.set("category", category.value)
+					}
+					else{
+						params.append("category", category.value)
+					}
+					console.log(url)
+					console.log(params.get("category"))
+				})
+
+			</script>
+
 		</div>
 	</div>
 	<!-- Filter form section end -->
@@ -131,7 +169,7 @@
 
 
 	<!-- feature category section -->
-	<section class="feature-category-section spad">
+	{% comment %} <section class="feature-category-section spad">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>LOOKING PROPERTY</h3>
@@ -146,12 +184,12 @@
 			{% endfor %}
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!-- feature category section end-->
 
 
 	<!-- Gallery section -->
-	<section class="gallery-section spad">
+	{% comment %} <section class="gallery-section spad">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>Popular Places</h3>
@@ -171,7 +209,7 @@
 				
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!-- Gallery section end -->
 
 

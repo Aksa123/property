@@ -11,7 +11,7 @@
 	<!--  Page top end -->
 
 	<!-- Breadcrumb -->
-	<div class="site-breadcrumb">
+	<div class="site-breadcrumb" id="aksa">
 		<div class="container">
 			<a href=""><i class="fa fa-home"></i>Home</a>
 			<span><i class="fa fa-angle-right"></i>Featured Listings</span>
@@ -70,39 +70,23 @@
 			</div>
 			<div class="site-pagination">
 
-			<!-- for filtered listing -->
-			{% if filter_url %}
-				{% if prev_page %}
-					<a href="{% url filter_url filter_id filter_name prev_page %}"><i class="fa fa-angle-left"></i></a>
-				{% endif %}
-				{% for i in page_list %}
-					{% if i == page %}
-						<span>{{ page }}</span>
-					{% else %}
-						<a href="{% url filter_url filter_id filter_name i %}">{{ i }}</a>
-					{% endif %}
-				{% endfor %}
-				{% if next_page %}
-					<a href="{% url filter_url filter_id filter_name next_page %}"><i class="fa fa-angle-right"></i></a>
-				{% endif %}
-
 			<!-- for all listing -->
-			{% else %}
-				{% if prev_page %}
-					<a class="page-button prev-page page-item"><input type="hidden" value={{prev_page}}><i class="fa fa-angle-left"></i></a>
-				{% endif %}
-				{% for i in page_list %}
-					{% if i == page %}
-						<span class="page-item">{{ page }}</span>
-					{% else %}
-						<a class="page-item" href="{% url 'browse' i %}"><input type="hidden" value={{i}}>{{ i }}</a>
-					{% endif %}
-				{% endfor %}
-				{% if next_page %}
-					<a class="page-button next-page page-item"><input type="hidden" value={{next_page}}><i class="fa fa-angle-right"></i></a>
-					{% comment %} <a href="{% url 'browse' next_page %}"><i class="fa fa-angle-right"></i></a> {% endcomment %}
-				{% endif %}
+		
+			{% if prev_page %}
+				<a class="page-button prev-page page-item" href="#aksa"><input type="hidden" value={{prev_page}}><i class="fa fa-angle-left"></i></a>
 			{% endif %}
+			{% for i in page_list %}
+				{% if i == page %}
+					<span class="page-item">{{ page }}</span>
+				{% else %}
+					<a class="page-item" href="#aksa"><input type="hidden" value={{i}}>{{ i }}</a>
+				{% endif %}
+			{% endfor %}
+			{% if next_page %}
+				<a class="page-button next-page page-item" href="#aksa"><input type="hidden" value={{next_page}}><i class="fa fa-angle-right"></i></a>
+				{% comment %} <a href="{% url 'browse' next_page %}"><i class="fa fa-angle-right"></i></a> {% endcomment %}
+			{% endif %}
+		
 			</div>
 		</div>
 	</section>

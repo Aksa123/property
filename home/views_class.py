@@ -45,6 +45,7 @@ class Login(View):
         else:
             return HttpResponse("Username & password don't match !?")
 
+
 class Logout(View):
     template_name = 'home/login.html'
     def get(self, request):
@@ -58,6 +59,7 @@ class About(View):
     template_name = 'home/about.html'
     def get(self, request):
         return render(self.request, self.template_name)
+
 
 class ContactUs(View):
     template_name = 'home/contact.html'

@@ -2,19 +2,35 @@ var page = 1;
 var page_button = document.querySelectorAll("a.page-item")
 var property_list = document.querySelector(".property-list")
 var url_params = new URLSearchParams(window.location.search)
+var add_params = ""
+const url = new URL("http://127.0.0.1:8000/browse/")
 
 console.log(window.location.search)
-console.log(url_params)
 
 function addPageButtonFunction(btn){
     btn.addEventListener("click", function(event){
         event.preventDefault();
-        page = btn.querySelector("input").value;
-        let url = "/browse2?page=" + page
-        if (url_params.has("text")){
-            url += "&filter=" + url_params.get("filter") + "&text=" + url_params.get("text")
+        page = btn.querySelector("input").value
+        // let url = "/browse?ajax=true&page=" + page
+        // // refresh add_params so it won't overlap
+        // add_params = "" 
+        // for(let i of url_params.keys()){
+        //     if (url_params.get(i) !== "page" && url_params.get(i) !== "ajax")
+        //     add_params += "&" + i + "=" + url_params.get(i)
+        // }
+        // url += add_params
+        
+        //
+        
+        if (url_params.has("page")){
+            url_params.set("page", page)
         }
-        fetch(url)
+        else{
+            url_params.append("page", page)
+        }        
+        let fetch_url = url + "?ajax=true&" + url_params.toString()
+        
+        fetch(fetch_url)
         .then(function(response) {
             if (response.ok){
                 console.log("success!")
@@ -77,10 +93,8 @@ function addPageButtonFunction(btn){
                 +'</div>'
             +'</div>'
             }
-            console.log(window.location.href)
 
-            refreshPagination(properties.next_page, properties.prev_page, properties.page_list)
-            console.log(window.location.href)
+            refreshPagination(properties.next_page, properties.prev_page, properties.page_list, url_params.toString())
 
         })
         .catch(error => console.log(error))
@@ -89,7 +103,7 @@ function addPageButtonFunction(btn){
 }
 
 
-function refreshPagination(next_page, prev_page, page_list){    
+function refreshPagination(next_page, prev_page, page_list, new_param){    
     let pagination = document.querySelector(".site-pagination")
     let page_items = pagination.querySelectorAll(".page-item")
     for (i=0; i<page_items.length; i++){
@@ -121,12 +135,10 @@ function refreshPagination(next_page, prev_page, page_list){
         let btn = new_page_button[k]
         addPageButtonFunction(btn)
     }
-    if (url_params.has("text")){
-        window.history.pushState('page2', 'Title', '/browse?page=' + page + "&filter=" + url_params.get("filter") + "&text=" + url_params.get("text"));
-    }
-    else{
-        window.history.pushState('', '', '/browse?page=' + page);
-    }
+
+    
+    window.history.pushState('', '', url + "?" + new_param);
+    
     
 }
 

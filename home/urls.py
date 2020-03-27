@@ -47,13 +47,7 @@ urlpatterns = [
 
     path('', views.home, name='home'),
     path('property/<int:id>/', views.property_detail, name='property_detail'),
-    path('browse', views.browse, name='browse'),
-    path('browse/page/<int:page>/', views.browse, name='browse'),
-    path('browse2', views.browse2, name='browse2'),
-    path('browse/city/<int:city_id>-<str:city_name>/page/<int:page>/', views.browse_city, name='browse_city'),
-    path('browse/category/<int:category_id>-<str:category_name>/page/<int:page>/', views.browse_category, name='browse_category'),
-    path('browse/search/', views.browse_search, name='browse_search'),
-    path('browse/search/<str:search>=<str:text>/<int:page>/', views.browse_search_result, name='browse_search_result'),
+    path('browse/', views.browse, name='browse'),
 
     path('blogs/', views.blog, name='blog'),
     path('blogs/<int:page>/', views.blog, name='blog'),

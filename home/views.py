@@ -694,25 +694,24 @@ def property_detail(request, id):
     return render(request, 'home/property_detail.html', context={'property': property_object, 'images': images, 'related_properties': related_properties})
 
 
-def browse_result(request, result, page, search_dictionary=None):
-    if request.path == '/browse/page/1/':
-        return HttpResponseRedirect(reverse('browse'))
-    
-    if search_dictionary:
-        search_text = search_dictionary['search_text']
-        search_filter =  search_dictionary['search_filter']
-        if search_filter == "city":
-            search_cities = City.objects.filter(name__icontains=search_text).values_list('id', flat=True)
-            properties =  Property.objects.filter(city_id__in=search_cities).order_by('-order', '-id')
-        elif search_filter == "category":
-            search_categories = Category.objects.filter(name__icontains=search_text).values_list('id', flat=True)
-            properties = Property.objects.filter(category__in=search_categories).order_by('-order', '-id')
+def browse(request, page=1, category_id=0, city_id=0, city_name="all"):
+    page = 1
+    return_type = "render"
+    if "page" in request.GET:
+        page = int(request.GET['page'])
+    if "ajax" in request.GET:
+        return_type = "ajax"
+    if "city" in request.GET and "category" in request.GET:
+        properties = Property.objects.filter(city=int(request.GET['city']), category=int(request.GET['category'])).order_by('-order', '-id')
+    elif "city" in request.GET:
+        properties = Property.objects.filter(city=request.GET['city']).order_by('-order', '-id')
+    elif "category" in request.GET:
+        properties = Property.objects.filter(category=request.GET['category']).order_by('-order', '-id')
     else:
         properties = Property.objects.all().order_by('-order', '-id')
-
+    
     paginator = Paginator(properties, 2)
     page_obj = paginator.get_page(page)
-
     page_list = []
     for i in range(1,paginator.num_pages + 1):
         page_list.append(i)
@@ -726,7 +725,7 @@ def browse_result(request, result, page, search_dictionary=None):
     else:
         prev_page = page - 1
     
-    if result == "ajax":
+    if return_type == "ajax":
         prop_list = []
         for prop in page_obj:
             prop_list.append({"id": prop.pk, "user": prop.user.username, "name": prop.name, "address":prop.address, "area": prop.area, "bedroom": prop.bedroom, "bathroom": prop.bathroom, "founded_date": prop.founded_dateformat(), "garage": prop.garage, "absolute_url": prop.absolute_url(), 'status': prop.status.name, 'city': prop.city.name, "url": reverse("property_detail", args=[prop.pk]), "price": prop.price})
@@ -735,86 +734,11 @@ def browse_result(request, result, page, search_dictionary=None):
             'page': page, 'page_list': page_list, 'next_page': next_page, 'prev_page': prev_page,
             'properties': prop_list
         }
-
         return JsonResponse(data_json)
         
     else:
         return render(request, 'home/browse.html', context={'properties': page_obj, 'page': page, 'page_list': page_list, 'next_page': next_page, 'prev_page': prev_page})
-
-
-def browse(request, page=1, category_id=0, city_id=0, city_name="all"):
-    if "page" in request.GET:
-        page = int(request.GET['page'])
-    else:
-        page = 1
-
-    if "text" in request.GET:
-        search_text = request.GET['text']
-        search_filter = request.GET['filter']
-        search_dictionary = {'search_text': search_text, 'search_filter': search_filter}
-        returned_result = browse_result(request=request, result="render", page=page, search_dictionary=search_dictionary)
-        return returned_result
-    else:
-        returned_result = browse_result(request=request, result="render", page=page)
-        return returned_result
     
-
-def browse2(request, page=1, category_id=0, city_id=0, city_name="all"):
-    if "page" in request.GET:
-        page = int(request.GET['page'])
-    else:
-        page = 1
-
-    if "text" in request.GET:
-        search_text = request.GET['text']
-        search_filter = request.GET['filter']
-        search_dictionary = {'search_text': search_text, 'search_filter': search_filter}
-        returned_result = browse_result(request=request, result="ajax", page=page, search_dictionary=search_dictionary)
-        return returned_result
-    else:
-        returned_result = browse_result(request=request, result="ajax", page=page)
-        return returned_result
-
-
-def browse_city(request, city_id, page, city_name):
-    properties = Property.objects.filter(city_id=city_id).order_by('-order', '-id')
-    paginator = Paginator(properties, 2)
-    page_obj = paginator.get_page(page)
-    page_list = []
-    for i in range(1,paginator.num_pages + 1):
-        page_list.append(i)
-
-    if page == paginator.num_pages:
-        next_page = 0
-    else:
-        next_page = page + 1
-    if page == 1:
-        prev_page = 0
-    else:
-        prev_page = page - 1
-    
-    return render(request, 'home/browse.html', context={'properties': page_obj, 'page': page, 'page_list': page_list, 'next_page': next_page, 'prev_page': prev_page, 'filter_url': 'browse_city', 'filter_id':city_id, 'filter_name': city_name, 'filter': str("City: " + city_name) })
-
-
-def browse_category(request, category_id, page, category_name):
-    properties = Property.objects.filter(category_id=category_id).order_by('-order', '-id')
-    paginator = Paginator(properties, 2)
-    page_obj = paginator.get_page(page)
-
-    page_list = []
-    for i in range(1,paginator.num_pages + 1):
-        page_list.append(i)
-
-    if page == paginator.num_pages:
-        next_page = 0
-    else:
-        next_page = page + 1
-    if page == 1:
-        prev_page = 0
-    else:
-        prev_page = page - 1
-    
-    return render(request, 'home/browse.html', context={'properties': page_obj, 'page': page, 'page_list': page_list, 'next_page': next_page, 'prev_page': prev_page, 'filter_url': 'browse_category', 'filter_id': category_id, 'filter_name': category_name, 'filter': str("Category: " + category_name)})
 
 
 def browse_search(request):

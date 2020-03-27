@@ -65,7 +65,16 @@
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
-					<div class="form-inline" data-validate="Enter role">
+					<div class="wrap-input100 validate-input">
+						<label for="inputState">Role</label>
+						<select id="inputState" class="input100" name="role">
+							<option selected id="exampleRadios1" value="user">User</option>
+							<option id="exampleRadios2" value="owner">Owner</option>
+							<option id="exampleRadios3" value="admin" disabled>Admin</option>
+						</select>
+					</div>
+
+					{% comment %} <div class="form-inline" data-validate="Enter role">
 						<div class="form-check form-check-inline">
 							<input class="form-check-input input100" type="radio" name="role" id="exampleRadios1" value="user" checked>
 							<label class="form-check-label" for="exampleRadios1">
@@ -84,7 +93,7 @@
 								Admin
 							</label>
 						</div>
-					</div>
+					</div> {% endcomment %}
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="avatar" accept="image/*" id="customFile">
 						<label class="custom-file-label" for="customFile">Avatar</label>
