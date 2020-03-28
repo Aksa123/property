@@ -94,13 +94,57 @@
 						</div>
 					</div>
 					<div class="contact-form-card">
-						<h5>Do you have any question?</h5>
+						{% comment %} <h5>Do you have any question?</h5>
 						<form>
 							<input type="text" placeholder="Your name">
 							<input type="text" placeholder="Your email">
 							<textarea placeholder="Your question"></textarea>
 							<button>SEND</button>
+						</form> {% endcomment %}
+						<h5>Do you have any question?</h5>
+						<form id="question-form" method="POST", action="{% url 'property_detail' property.id %}">
+							{{ form.name }}
+							{{ form.email }}
+							{{ form.content }}
+
+							{% csrf_token %}
+							<input type="hidden" name="property_id" value={{ property.id }}>
+							<button type="submit">SEND</button>
 						</form>
+						<script>
+							var form = document.querySelector("#question-form")
+							form.addEventListener("submit", function(e){
+								e.preventDefault()
+								let name = form.querySelector("[name=name]").value
+								let email = form.querySelector("[name=email]").value
+								let content = form.querySelector("[name=content]").value
+								let property_id =  form.querySelector("[name=property_id]").value
+								let csrf = form.querySelector("[name=csrfmiddlewaretoken]").value
+								let url = "/property/" + property_id + "/"
+								let data = new FormData()
+								data.append("name", name)
+								data.append("email", email)
+								data.append("content", content)
+								
+								fetch(url, {
+									method: "POST",
+									headers: {
+										"X-CSRFToken": csrf
+									},
+									body: data
+								})
+								.then(response => response.json())
+								.then(function(result){
+									form.querySelector("[name=name]").value = ""
+									form.querySelector("[name=email]").value = ""
+									form.querySelector("[name=content]").value = ""
+									alert("Your question has been submitted !")
+									console.log(result.status)
+								})
+							})
+
+						</script>
+
 					</div>
 					<div class="related-properties">
 						<h2>Related Properties</h2>

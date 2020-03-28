@@ -123,3 +123,9 @@ class ContactMail(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
     content = models.TextField()
+
+class PropertyMail(models.Model):
+    prop = models.ForeignKey(Property, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    content = models.TextField()

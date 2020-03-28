@@ -100,3 +100,9 @@ class ContactMailForm(forms.Form):
     name = forms.CharField(label="Name", max_length=50, widget=forms.TextInput(attrs={"class": "form-control", "required":""}))
     email = forms.EmailField(label="Email", max_length=100, widget=forms.TextInput(attrs={"class": "form-control", "type": "email", "required":""}))
     content = forms.CharField(label="Message", widget=forms.Textarea(attrs={"class": "form-control", "required":""}))
+
+
+class PropertyMailForm(forms.Form):
+    name = forms.CharField(label="Name", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'required':'', "placeholder": "Your name"}))
+    email = forms.EmailField(label="Email", max_length=100, widget=forms.TextInput(attrs={"class": "form-control", "type": "email", "required": "", "placeholder": "Your email"}))
+    content = forms.CharField(label="Message", widget=forms.Textarea(attrs={"class": "form-control", "required": "", "placeholder": "Your question"}))

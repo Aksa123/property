@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import request, HttpResponse, HttpResponseRedirect, JsonResponse
-from .models import Property, City, UserProfile, Category, Status, City, PropertyImage, Blog, Review, About, Comment
+from .models import Property, City, UserProfile, Category, Status, City, PropertyImage, Blog, Review, About, Comment, PropertyMail
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.core.files.uploadedfile import SimpleUploadedFile
-from .forms import UserForm, CategoryForm, StatusForm, CityForm, PropertyForm, UserEditForm, BlogForm, ReviewForm, AboutForm
+from .forms import UserForm, CategoryForm, StatusForm, CityForm, PropertyForm, UserEditForm, BlogForm, ReviewForm, AboutForm, PropertyMailForm
 from django.utils.decorators import decorator_from_middleware, decorator_from_middleware_with_args
 from .middleware import LoginRoleMiddleware
 from django.core.paginator import Paginator
@@ -687,11 +687,28 @@ def home(request):
 
 
 def property_detail(request, id):
-    property_object = Property.objects.get(pk=id)
-    images = PropertyImage.objects.filter(prop=id)
-    related_properties = Property.objects.filter(category=property_object.category).exclude(id=property_object.id)[:4]
+    if request.method == "POST":
+        input_form = PropertyMailForm(request.POST)
+        if input_form.is_valid():
+            name = input_form.cleaned_data['name']
+            email = input_form.cleaned_data['email']
+            content = input_form.cleaned_data['content']
 
-    return render(request, 'home/property_detail.html', context={'property': property_object, 'images': images, 'related_properties': related_properties})
+            property_obj = Property.objects.get(pk=id)
+            new_mail = PropertyMail(prop=property_obj,name=name, email=email, content=content)
+            new_mail.save()
+            return JsonResponse({"status": "done !"})
+
+        else:
+            return JsonResponse({"status": "error !"})
+
+    else:
+        property_object = Property.objects.get(pk=id)
+        images = PropertyImage.objects.filter(prop=id)
+        related_properties = Property.objects.filter(category=property_object.category).exclude(id=property_object.id)[:4]
+        form = PropertyMailForm()
+
+        return render(request, 'home/property_detail.html', context={'property': property_object, 'images': images, 'related_properties': related_properties, "form": form})
 
 
 def browse(request, page=1, category_id=0, city_id=0, city_name="all"):
