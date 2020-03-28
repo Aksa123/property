@@ -169,7 +169,7 @@
 
 
 	<!-- feature category section -->
-	{% comment %} <section class="feature-category-section spad">
+	<section class="feature-category-section spad">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>LOOKING PROPERTY</h3>
@@ -179,17 +179,17 @@
 			{% for category in categories %}
 				<div class="col-lg-3 col-md-6 f-cata">
 					<img src="{% static 'home/img/feature-cate/1.jpg' %}" alt="">
-					<a href={% url 'browse_category' category_id=category.id category_name=category.name page=1 %}><h5>{{ category.home_text }}</h5></a>
+					<a href="{% url 'browse' %}?category={{ category.id }}"><h5>{{ category.home_text }}</h5></a>
 				</div>
 			{% endfor %}
 			</div>
 		</div>
-	</section> {% endcomment %}
+	</section>
 	<!-- feature category section end-->
 
 
 	<!-- Gallery section -->
-	{% comment %} <section class="gallery-section spad">
+	<section class="gallery-section spad">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>Popular Places</h3>
@@ -199,7 +199,7 @@
 				<div class="grid-sizer"></div>
 				{% for city in cities %}
 					{% load static %}
-					<a href="{% url 'browse_city' city_id=city.id city_name=city.name page=1%}" class="gallery-item grid-long set-bg" data-setbg={{ city.absolute_url }}>
+					<a href="{% url 'browse' %}?city={{city.id}}" class="gallery-item grid-long set-bg" data-setbg={{ city.absolute_url }}>
 						<div class="gi-info">
 							<h3>{{ city.name }}</h3>
 							<p>{{ city.number_of_listing }} Properties</p>
@@ -209,7 +209,7 @@
 				
 			</div>
 		</div>
-	</section> {% endcomment %}
+	</section>
 	<!-- Gallery section end -->
 
 
