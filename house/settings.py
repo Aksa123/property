@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import env_setting
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +24,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_ztuhqku6)_1$tb(i97s0^!64!s!6k27bub19y*8f(ch*j-orl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if env_setting.env == 'development':
+    DEBUG = True
 
-ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = []
+
+else:
+    DEBUG = False
+
+    ALLOWED_HOSTS = ['*']
 
 
 # Application definition
