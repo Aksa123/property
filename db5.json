@@ -1,0 +1,2345 @@
+[
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add blog",
+        "content_type": [
+            "home",
+            "blog"
+        ],
+        "codename": "add_blog"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change blog",
+        "content_type": [
+            "home",
+            "blog"
+        ],
+        "codename": "change_blog"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete blog",
+        "content_type": [
+            "home",
+            "blog"
+        ],
+        "codename": "delete_blog"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view blog",
+        "content_type": [
+            "home",
+            "blog"
+        ],
+        "codename": "view_blog"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add category",
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change category",
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete category",
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view category",
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add city",
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "codename": "add_city"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change city",
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "codename": "change_city"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete city",
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "codename": "delete_city"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view city",
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "codename": "view_city"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add status",
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "codename": "add_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change status",
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "codename": "change_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete status",
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "codename": "delete_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view status",
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "codename": "view_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add property",
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "codename": "add_property"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change property",
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "codename": "change_property"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete property",
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "codename": "delete_property"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view property",
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "codename": "view_property"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add comment",
+        "content_type": [
+            "home",
+            "comment"
+        ],
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change comment",
+        "content_type": [
+            "home",
+            "comment"
+        ],
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete comment",
+        "content_type": [
+            "home",
+            "comment"
+        ],
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view comment",
+        "content_type": [
+            "home",
+            "comment"
+        ],
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add attachment",
+        "content_type": [
+            "django_summernote",
+            "attachment"
+        ],
+        "codename": "add_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change attachment",
+        "content_type": [
+            "django_summernote",
+            "attachment"
+        ],
+        "codename": "change_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete attachment",
+        "content_type": [
+            "django_summernote",
+            "attachment"
+        ],
+        "codename": "delete_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view attachment",
+        "content_type": [
+            "django_summernote",
+            "attachment"
+        ],
+        "codename": "view_attachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": [
+            "home",
+            "userprofile"
+        ],
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": [
+            "home",
+            "userprofile"
+        ],
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": [
+            "home",
+            "userprofile"
+        ],
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user profile",
+        "content_type": [
+            "home",
+            "userprofile"
+        ],
+        "codename": "view_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add property image",
+        "content_type": [
+            "home",
+            "propertyimage"
+        ],
+        "codename": "add_propertyimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change property image",
+        "content_type": [
+            "home",
+            "propertyimage"
+        ],
+        "codename": "change_propertyimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete property image",
+        "content_type": [
+            "home",
+            "propertyimage"
+        ],
+        "codename": "delete_propertyimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view property image",
+        "content_type": [
+            "home",
+            "propertyimage"
+        ],
+        "codename": "view_propertyimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add about",
+        "content_type": [
+            "home",
+            "about"
+        ],
+        "codename": "add_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change about",
+        "content_type": [
+            "home",
+            "about"
+        ],
+        "codename": "change_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete about",
+        "content_type": [
+            "home",
+            "about"
+        ],
+        "codename": "delete_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view about",
+        "content_type": [
+            "home",
+            "about"
+        ],
+        "codename": "view_about"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add review",
+        "content_type": [
+            "home",
+            "review"
+        ],
+        "codename": "add_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change review",
+        "content_type": [
+            "home",
+            "review"
+        ],
+        "codename": "change_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete review",
+        "content_type": [
+            "home",
+            "review"
+        ],
+        "codename": "delete_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view review",
+        "content_type": [
+            "home",
+            "review"
+        ],
+        "codename": "view_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add contact mail",
+        "content_type": [
+            "home",
+            "contactmail"
+        ],
+        "codename": "add_contactmail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change contact mail",
+        "content_type": [
+            "home",
+            "contactmail"
+        ],
+        "codename": "change_contactmail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete contact mail",
+        "content_type": [
+            "home",
+            "contactmail"
+        ],
+        "codename": "delete_contactmail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view contact mail",
+        "content_type": [
+            "home",
+            "contactmail"
+        ],
+        "codename": "view_contactmail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add property mail",
+        "content_type": [
+            "home",
+            "propertymail"
+        ],
+        "codename": "add_propertymail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change property mail",
+        "content_type": [
+            "home",
+            "propertymail"
+        ],
+        "codename": "change_propertymail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete property mail",
+        "content_type": [
+            "home",
+            "propertymail"
+        ],
+        "codename": "delete_propertymail"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view property mail",
+        "content_type": [
+            "home",
+            "propertymail"
+        ],
+        "codename": "view_propertymail"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$TnMHiqoEuLRd$sgzlX2bwC7loo0IOZvRbBOKZykYokdur6RNg9w/eGeI=",
+        "last_login": "2020-03-24T00:56:23.330Z",
+        "is_superuser": true,
+        "username": "aksa",
+        "first_name": "",
+        "last_name": "",
+        "email": "aksa@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-02-02T03:29:53.213Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$4c99SQ9clC0G$wEthb5rKQLcltG8yfwHgARdl2QOUuOmECowtoj+FkT4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "subidab X",
+        "first_name": "",
+        "last_name": "",
+        "email": "subidabx@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-11T03:40:54.524Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$d18Om6UditWw$dyz+F/NDWpZiahgzoS07CxmzQuQAmQwAz4C40heq++I=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Malta",
+        "first_name": "",
+        "last_name": "",
+        "email": "malta@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-12T14:30:33.403Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$NHcXFeCYlugo$IWcDh+RzO9iD7DJIsmE8ldT+ivHVqQ8y2hI2Pudc/TQ=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jujija",
+        "first_name": "",
+        "last_name": "",
+        "email": "jujija@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-15T15:09:49.220Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$0xWPJ9QjiLNY$w2mt5/fF1Magrlu5RWmKQLJhkkCbMgaf/7mH57xl8rQ=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "somedude",
+        "first_name": "",
+        "last_name": "",
+        "email": "somedude@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-02-15T15:10:42.966Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$5gVQ7dDaKJmc$gw8vGPmfHKbAofxtNBXpydZxKmCEzAbsI0hZASsyINE=",
+        "last_login": "2020-03-22T12:47:47.390Z",
+        "is_superuser": false,
+        "username": "arseilles",
+        "first_name": "",
+        "last_name": "",
+        "email": "arseilles@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-03-22T12:46:45.948Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$YtGjHKZm4Zzz$Zk5aMfQkB1ImyFKHUhtf2TkbXvCWLpELolrG+cI82z4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "whale",
+        "first_name": "",
+        "last_name": "",
+        "email": "whale@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-03-24T00:56:12.414Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9kvwt80czbk4v4beu0d5j93ocqxv1g0k",
+    "fields": {
+        "session_data": "MzFhZDA0MGI4MzkwZmZhNTgzNTIwNTAyMTMyNjM4OTVhOTJhYTUzMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzYTRhNGY3MzliMTcxNDY3MDIxMzcyYjNmOWQ0ZGVjZjZmYjkxYWY5In0=",
+        "expire_date": "2020-03-13T13:10:55.605Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "a67a7n99asx0iv25aaa97hunro9it9lr",
+    "fields": {
+        "session_data": "MzFhZDA0MGI4MzkwZmZhNTgzNTIwNTAyMTMyNjM4OTVhOTJhYTUzMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzYTRhNGY3MzliMTcxNDY3MDIxMzcyYjNmOWQ0ZGVjZjZmYjkxYWY5In0=",
+        "expire_date": "2020-03-11T12:46:35.311Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "byyd2tosmgs7cfzc8ugyvq8ksudgkdi4",
+    "fields": {
+        "session_data": "MzFhZDA0MGI4MzkwZmZhNTgzNTIwNTAyMTMyNjM4OTVhOTJhYTUzMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzYTRhNGY3MzliMTcxNDY3MDIxMzcyYjNmOWQ0ZGVjZjZmYjkxYWY5In0=",
+        "expire_date": "2020-04-07T00:56:23.335Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "r3fooydirxf4j0dzizo25vdeyn5z3kb9",
+    "fields": {
+        "session_data": "MzFhZDA0MGI4MzkwZmZhNTgzNTIwNTAyMTMyNjM4OTVhOTJhYTUzMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzYTRhNGY3MzliMTcxNDY3MDIxMzcyYjNmOWQ0ZGVjZjZmYjkxYWY5In0=",
+        "expire_date": "2020-03-29T09:07:38.079Z"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 1,
+    "fields": {
+        "name": "Apartment",
+        "home_text": "Apartment for rent"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 2,
+    "fields": {
+        "name": "Home",
+        "home_text": "Family Home"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 3,
+    "fields": {
+        "name": "Villa",
+        "home_text": "Resort Villas"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 4,
+    "fields": {
+        "name": "Office",
+        "home_text": "Office Building"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 5,
+    "fields": {
+        "name": "Hotel",
+        "home_text": "Luxury hotel"
+    }
+},
+{
+    "model": "home.category",
+    "pk": 8,
+    "fields": {
+        "name": "Public",
+        "home_text": "Public place"
+    }
+},
+{
+    "model": "home.status",
+    "pk": 1,
+    "fields": {
+        "name": "For Rent"
+    }
+},
+{
+    "model": "home.status",
+    "pk": 2,
+    "fields": {
+        "name": "For Sale"
+    }
+},
+{
+    "model": "home.status",
+    "pk": 4,
+    "fields": {
+        "name": "For Event X"
+    }
+},
+{
+    "model": "home.status",
+    "pk": 5,
+    "fields": {
+        "name": "For Gaming"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 3,
+    "fields": {
+        "name": "St Louis",
+        "number_of_listing": 7,
+        "image": "city/photography-of-lighted-bridge-753639.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 4,
+    "fields": {
+        "name": "Florida",
+        "number_of_listing": 3,
+        "image": "city/architecture-buildings-business-city-208643.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 5,
+    "fields": {
+        "name": "Tokyo",
+        "number_of_listing": 6,
+        "image": "city/illuminated-tower-2614818.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 6,
+    "fields": {
+        "name": "Jogja",
+        "number_of_listing": 3,
+        "image": "city/2019-07-22.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 8,
+    "fields": {
+        "name": "Zurich",
+        "number_of_listing": 3,
+        "image": "city/train-passing-7734711.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 9,
+    "fields": {
+        "name": "New York",
+        "number_of_listing": 3,
+        "image": "city/53176988_p0.jpg"
+    }
+},
+{
+    "model": "home.city",
+    "pk": 10,
+    "fields": {
+        "name": "Hamburg",
+        "number_of_listing": 3,
+        "image": "city/40431769_p0.jpg"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "phone": "+6281316462152",
+        "image": "user/78717394_p0.jpg",
+        "role": "admin"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "subidab X"
+        ],
+        "phone": "+67228199202",
+        "image": "user/70764483_p0_a1IxbAZ.jpg",
+        "role": "user"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "Malta"
+        ],
+        "phone": "+11",
+        "image": "user/53176988_p0_hAFPMMs.jpg",
+        "role": "owner"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "jujija"
+        ],
+        "phone": "123123123",
+        "image": "user/stefan-celic-artstation-2_WFXX2jz.jpg",
+        "role": "user"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "somedude"
+        ],
+        "phone": "098767890",
+        "image": "user/60494614_p0.png",
+        "role": "owner"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "arseilles"
+        ],
+        "phone": "+09090990",
+        "image": "user/80196588_p0.jpg",
+        "role": "owner"
+    }
+},
+{
+    "model": "home.userprofile",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "whale"
+        ],
+        "phone": "12312312",
+        "image": "user/70764483_p0_RC2zVGp.jpg",
+        "role": "owner"
+    }
+},
+{
+    "model": "home.property",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Stanford",
+        "address": "St. of the Lost 39",
+        "city": 3,
+        "price": "12.00",
+        "status": 1,
+        "area": 36,
+        "garage": true,
+        "bathroom": 1,
+        "bedroom": 1,
+        "category": 1,
+        "founded_date": "2020-02-01",
+        "description": "<p>description bruh<br></p>",
+        "avatar": "property/73497750_p0_T4faRIg.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1976.3623488886906!2d110.3940859!3d-7.8189375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57124c36e46b%3A0x66b3dc644cbdf7d8!2sWarung%20Bakmi%20Jawa%20Pak%20Abu!5e0!3m2!1sen!2sid!4v1581772390702!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "subidab X"
+        ],
+        "name": "Tokyo University",
+        "address": "Sakura St. 17",
+        "city": 5,
+        "price": "50.00",
+        "status": 5,
+        "area": 77,
+        "garage": true,
+        "bathroom": 10,
+        "bedroom": 15,
+        "category": 3,
+        "founded_date": "2020-02-14",
+        "description": "<p>dream house<br></p>",
+        "avatar": "property/stefan-celic-artstation-2_vMcQZPJ.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.173824050776!2d110.37531111529685!3d-7.771384694399145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b2d4729729%3A0xac4d7b5fcf34f8e4!2sGadjah%20Mada%20University!5e0!3m2!1sen!2sid!4v1581825386154!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "UC Berkerly",
+        "address": "Snowy Mountain St. 27",
+        "city": 4,
+        "price": "64.00",
+        "status": 5,
+        "area": 70,
+        "garage": true,
+        "bathroom": 5,
+        "bedroom": 9,
+        "category": 8,
+        "founded_date": "2020-02-14",
+        "description": "<p>Description here<br></p>",
+        "avatar": "property/60494614_p0_HHm4zpi.png",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.5038009733476!2d-122.26072858426612!3d37.87189917974194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7718c522d7c1%3A0xda8034ea3b6b3289!2sUniversity%20of%20California%2C%20Berkeley!5e0!3m2!1sen!2sid!4v1581825551924!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "Malta"
+        ],
+        "name": "Einherjar",
+        "address": "Valhalla St. 99",
+        "city": 8,
+        "price": "78.00",
+        "status": 2,
+        "area": 36,
+        "garage": false,
+        "bathroom": 50,
+        "bedroom": 100,
+        "category": 3,
+        "founded_date": "2020-01-30",
+        "description": "<p>There was an idea... to bring together a group of remarkable people. To see if we could become something more. So when they needed us, we could fight the battles... that they never could.</p><p><b>THANOS:</b></p><ul><li>In time, you will know what it is like to lose.</li><li>To feel so desperately that you are right, yet to fail all the same.</li><li>Fun isn't something one considers when balancing the universe...</li><li>But this, <u><i><b>*evil chuckles*&nbsp; </b></i></u>DOES put a smile on my face!</li><li><br><b></b><br></li></ul>",
+        "avatar": "property/photo-of-cathedral-near-buildings-and-river-2311602.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.263397551153!2d141.33782431586172!3d43.07795747914529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b290bc5dc9a43%3A0x425f98023e0b86d5!2sHokkaido%20University!5e0!3m2!1sen!2sid!4v1581825612248!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "The Donald House",
+        "address": "Trump St. 56",
+        "city": 9,
+        "price": "293.00",
+        "status": 5,
+        "area": 500,
+        "garage": true,
+        "bathroom": 10,
+        "bedroom": 10,
+        "category": 4,
+        "founded_date": "2020-02-01",
+        "description": "<p>The orange guy lives here...<br></p>",
+        "avatar": "property/white-house-129112.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.981647603827!2d-73.97598268419686!3d40.76242837932639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258faf553cfad%3A0x8e9cfc7444d8f876!2sTrump%20Tower!5e0!3m2!1sen!2sid!4v1581825647836!5m2!1sen!2sid",
+        "order": 0,
+        "featured": false
+    }
+},
+{
+    "model": "home.property",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Green Park",
+        "address": "Scenery St. 01",
+        "city": 3,
+        "price": "0.00",
+        "status": 4,
+        "area": 200,
+        "garage": false,
+        "bathroom": 5,
+        "bedroom": 0,
+        "category": 8,
+        "founded_date": "2020-01-31",
+        "description": "<p>Just a good, regular park where people can chill.....<br></p>",
+        "avatar": "property/green-grass-field-with-trees-and-high-rise-buildings-in-3713517.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12093.141477713554!2d-74.00950135647967!3d40.733745819271306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259940c3213a7%3A0x8882c42182df455f!2sGreenwich%20Village%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sid!4v1581825686653!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Yggdrasil",
+        "address": "Nine Worlds St. 09",
+        "city": 8,
+        "price": "9.00",
+        "status": 2,
+        "area": 9,
+        "garage": true,
+        "bathroom": 9,
+        "bedroom": 9,
+        "category": 3,
+        "founded_date": "1999-09-09",
+        "description": "<p><span>Yggdrasil is an immense mythical tree that plays a central role in\r\n Norse cosmology, where it connects the Nine Worlds.\r\nYggdrasil is attested in the Poetic Edda, compiled in the 13th century \r\nfrom earlier traditional sources, and the Prose Edda, written in the \r\n13th century by Snorri Sturluson.</span></p>",
+        "avatar": "property/garden-path-way-park-2122.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d825369.027714375!2d-113.40355113883112!3d36.09110477316797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873312ae759b4d15%3A0x1f38a9bec9912029!2sGrand%20Canyon%20National%20Park!5e0!3m2!1sen!2sid!4v1581825742596!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Waterpark",
+        "address": "River Sam St. 60",
+        "city": 3,
+        "price": "100.00",
+        "status": 1,
+        "area": 2000,
+        "garage": false,
+        "bathroom": 5,
+        "bedroom": 2,
+        "category": 1,
+        "founded_date": "2020-02-01",
+        "description": "<p>Someplace to camp and relax.<br></p>",
+        "avatar": "property/bridge-cascade-environment-fall-358457_CEnMBqr.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93293.01750722721!2d-79.15807400586635!3d43.05391114496984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d3445eec824db9%3A0x46d2c56156bda288!2sNiagara%20Falls%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sid!4v1581907534411!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Cat Cafe",
+        "address": "cat street",
+        "city": 3,
+        "price": "29500.00",
+        "status": 2,
+        "area": 360,
+        "garage": true,
+        "bathroom": 4,
+        "bedroom": 5,
+        "category": 2,
+        "founded_date": "1950-03-16",
+        "description": "<p><b>BOLD</b></p><p><u>Underline</u><b><br></b><i>Italic</i><br></p>",
+        "avatar": "property/the-creperie-store-photography-776938_1.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.966374697202!2d132.71177531522426!3d34.402200580512066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa23e6f628dbb%3A0xb41b8827fb5fd7dd!2sHiroshima%20University!5e0!3m2!1sen!2sid!4v1584263461036!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.property",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "name": "Yuigahama",
+        "address": "Best Support St",
+        "city": 3,
+        "price": "999.00",
+        "status": 2,
+        "area": 36,
+        "garage": true,
+        "bathroom": 2,
+        "bedroom": 3,
+        "category": 1,
+        "founded_date": "2020-03-01",
+        "description": "<p>neeeeeeeeeeeeeeee<br></p>",
+        "avatar": "property/80196588_p0.jpg",
+        "google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0850849480607!2d142.3599439!3d43.771092599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0ce60ce4834d4b%3A0xb99ac0b308f5bbdf!2sDormy%20Inn%20Asahikawa!5e0!3m2!1sen!2sid!4v1585196395313!5m2!1sen!2sid",
+        "order": 0,
+        "featured": true
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 13,
+    "fields": {
+        "prop": 1,
+        "image": "property/60494614_p0_dlTErBP.png"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 14,
+    "fields": {
+        "prop": 1,
+        "image": "property/70764483_p0_zXtjKbK.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 15,
+    "fields": {
+        "prop": 1,
+        "image": "property/74956778_p0_I7wGAJk.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 18,
+    "fields": {
+        "prop": 3,
+        "image": "property/70764483_p0_wVPo397.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 19,
+    "fields": {
+        "prop": 3,
+        "image": "property/65479632_p0_OuGgllD.png"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 20,
+    "fields": {
+        "prop": 3,
+        "image": "property/53176988_p0_dVIO1t0.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 21,
+    "fields": {
+        "prop": 4,
+        "image": "property/70764483_p0_mU2kHdN.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 22,
+    "fields": {
+        "prop": 4,
+        "image": "property/74956778_p0_JNjjErm.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 23,
+    "fields": {
+        "prop": 4,
+        "image": "property/65479632_p0_8qnIH6D.png"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 24,
+    "fields": {
+        "prop": 5,
+        "image": "property/photo-of-lake-during-daytime-3109271.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 25,
+    "fields": {
+        "prop": 5,
+        "image": "property/snow-covered-roads-2004391.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 26,
+    "fields": {
+        "prop": 5,
+        "image": "property/red-and-white-wooden-houses-surrounded-with-trees-1508742.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 27,
+    "fields": {
+        "prop": 6,
+        "image": "property/buildings-city-city-view-cityscape-597909.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 28,
+    "fields": {
+        "prop": 6,
+        "image": "property/photography-of-bridge-during-nighttime-1239162.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 29,
+    "fields": {
+        "prop": 6,
+        "image": "property/1-wtc-america-architecture-buildings-374710.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 30,
+    "fields": {
+        "prop": 7,
+        "image": "property/bryce-canyon-canyon-clouds-dawn-545960.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 31,
+    "fields": {
+        "prop": 7,
+        "image": "property/white-boat-on-water-near-city-buildings-3711711.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 32,
+    "fields": {
+        "prop": 7,
+        "image": "property/green-grass-field-with-trees-and-high-rise-buildings-in-3713517_2Jytq0F.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 33,
+    "fields": {
+        "prop": 7,
+        "image": "property/white-house-129112_gerbUaE.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 34,
+    "fields": {
+        "prop": 7,
+        "image": "property/horseshoe-bend-photo-86703.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 35,
+    "fields": {
+        "prop": 8,
+        "image": "property/photo-of-grass-field-810893.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 36,
+    "fields": {
+        "prop": 8,
+        "image": "property/garden-path-way-park-2122_D4Y8OGc.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 37,
+    "fields": {
+        "prop": 8,
+        "image": "property/green-grass-field-2026451.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 38,
+    "fields": {
+        "prop": 8,
+        "image": "property/photo-of-boats-parked-on-river-2031706.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 39,
+    "fields": {
+        "prop": 8,
+        "image": "property/bryce-canyon-canyon-clouds-dawn-545960_VDYBLL7.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 40,
+    "fields": {
+        "prop": 9,
+        "image": "property/aerial-shot-of-water-fall-633835.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 41,
+    "fields": {
+        "prop": 9,
+        "image": "property/cascade-cliff-clouds-dawn-356831.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 42,
+    "fields": {
+        "prop": 9,
+        "image": "property/photography-of-waterfalls-between-trees-788200.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 43,
+    "fields": {
+        "prop": 9,
+        "image": "property/scenic-view-of-waterfalls-1598073.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 44,
+    "fields": {
+        "prop": 10,
+        "image": "property/vegetable-dish-in-white-plate-on-brown-table-1058435.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 45,
+    "fields": {
+        "prop": 10,
+        "image": "property/close-up-of-served-food-on-table-327158.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 46,
+    "fields": {
+        "prop": 10,
+        "image": "property/degustation-emotion-shopfront-during-day-2574489.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 47,
+    "fields": {
+        "prop": 10,
+        "image": "property/photo-of-cafe-interior-1307698.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 48,
+    "fields": {
+        "prop": 10,
+        "image": "property/close-up-photo-of-a-cheese-burger-1633578.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 49,
+    "fields": {
+        "prop": 10,
+        "image": "property/burrito-chicken-delicious-dinner-461198.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 50,
+    "fields": {
+        "prop": 11,
+        "image": "property/imposibru.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 51,
+    "fields": {
+        "prop": 11,
+        "image": "property/jazz-stop.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 52,
+    "fields": {
+        "prop": 11,
+        "image": "property/laugh.jpg"
+    }
+},
+{
+    "model": "home.propertyimage",
+    "pk": 53,
+    "fields": {
+        "prop": 11,
+        "image": "property/not_bad.jpg"
+    }
+},
+{
+    "model": "home.blog",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "avatar": "blog/palm-trees-at-night-258154_nTxVsbv.jpg",
+        "title": "Hotel According to Wikipedia Edited",
+        "content": "<p>A <b>hotel</b> is an establishment that provides paid <a href=\"https://en.wikipedia.org/wiki/Lodging\" title=\"Lodging\">lodging</a>\r\n on a short-term basis. Facilities provided may range from a \r\nmodest-quality mattress in a small room to large suites with bigger, \r\nhigher-quality beds, a dresser, a refrigerator and other kitchen \r\nfacilities, upholstered chairs, a flat screen television, and <a href=\"https://en.wikipedia.org/wiki/En-suite\" class=\"mw-redirect\" title=\"En-suite\">en-suite bathrooms</a>.\r\n Small, lower-priced hotels may offer only the most basic guest services\r\n and facilities. Larger, higher-priced hotels may provide additional \r\nguest facilities such as a swimming pool, business centre (with \r\ncomputers, printers, and other office equipment), childcare, conference \r\nand event facilities, tennis or basketball courts, gymnasium, \r\nrestaurants, day spa, and social function services. Hotel rooms are \r\nusually <a href=\"https://en.wikipedia.org/wiki/Room_number\" title=\"Room number\">numbered</a> (or named in some smaller hotels and <a href=\"https://en.wikipedia.org/wiki/Bed_and_breakfast\" title=\"Bed and breakfast\">B&amp;Bs</a>)\r\n to allow guests to identify their room. Some boutique, high-end hotels \r\nhave custom decorated rooms. Some hotels offer meals as part of a room \r\nand board arrangement. In the United Kingdom, a hotel is required by law\r\n to serve food and drinks to all guests within certain stated hours.<sup class=\"noprint Inline-Template Template-Fact\" style=\"white-space:nowrap;\">[<i><a href=\"https://en.wikipedia.org/wiki/Wikipedia:Citation_needed\" title=\"Wikipedia:Citation needed\"><span title=\"This claim needs references to reliable sources. (July 2018)\">citation needed</span></a></i>]</sup> In <a href=\"https://en.wikipedia.org/wiki/Japan\" title=\"Japan\">Japan</a>, <a href=\"https://en.wikipedia.org/wiki/Capsule_hotel\" title=\"Capsule hotel\">capsule hotels</a> provide a tiny room suitable only for sleeping and shared bathroom facilities.\r\n</p><p>The precursor to the modern hotel was the <a href=\"https://en.wikipedia.org/wiki/Inn\" title=\"Inn\">inn</a> of <a href=\"https://en.wikipedia.org/wiki/Medieval_Europe\" class=\"mw-redirect\" title=\"Medieval Europe\">medieval Europe</a>. For a period of about 200 years from the mid-17th century, <a href=\"https://en.wikipedia.org/wiki/Coaching_inn\" title=\"Coaching inn\">coaching inns</a> served as a place for lodging for <a href=\"https://en.wikipedia.org/wiki/Coach_(carriage)\" title=\"Coach (carriage)\">coach</a>\r\n travelers. Inns began to cater to richer clients in the mid-18th \r\ncentury. One of the first hotels in a modern sense was opened in <a href=\"https://en.wikipedia.org/wiki/Exeter\" title=\"Exeter\">Exeter</a> in 1768. Hotels proliferated throughout <a href=\"https://en.wikipedia.org/wiki/Western_Europe\" title=\"Western Europe\">Western Europe</a> and <a href=\"https://en.wikipedia.org/wiki/North_America\" title=\"North America\">North America</a> in the early 19th century, and luxury hotels began to spring up in the later part of the 19th century.\r\n</p><p>Hotel operations vary in size, function, complexity, and cost. \r\nMost hotels and major hospitality companies have set industry standards \r\nto classify hotel types. An upscale full-service hotel facility offers <a href=\"https://en.wikipedia.org/wiki/Luxury_goods\" title=\"Luxury goods\">luxury</a> amenities, full service accommodations, an on-site <a href=\"https://en.wikipedia.org/wiki/Restaurant\" title=\"Restaurant\">restaurant</a>, and the highest level of personalized service, such as a <a href=\"https://en.wikipedia.org/wiki/Concierge\" title=\"Concierge\">concierge</a>, <a href=\"https://en.wikipedia.org/wiki/Room_service\" title=\"Room service\">room service</a>, and clothes pressing staff. <a href=\"https://en.wikipedia.org/wiki/Conference_and_resort_hotels\" class=\"mw-redirect\" title=\"Conference and resort hotels\">Full service hotels</a> often contain upscale full-service facilities with many full-service accommodations, an on-site full-service <a href=\"https://en.wikipedia.org/wiki/Restaurant\" title=\"Restaurant\">restaurant</a>, and a variety of on-site <a href=\"https://en.wikipedia.org/wiki/Amenity\" title=\"Amenity\">amenities</a>. <a href=\"https://en.wikipedia.org/wiki/Boutique_hotel\" title=\"Boutique hotel\">Boutique hotels</a>\r\n are smaller independent, non-branded hotels that often contain upscale \r\nfacilities. Small to medium-sized hotel establishments offer a limited \r\namount of on-site <a href=\"https://en.wikipedia.org/wiki/Amenity\" title=\"Amenity\">amenities</a>. Economy hotels are small to medium-sized hotel establishments that offer basic accommodations with little to no services. <a href=\"https://en.wikipedia.org/wiki/Extended_stay_hotel\" class=\"mw-redirect\" title=\"Extended stay hotel\">Extended stay hotels</a> are small to medium-sized hotels that offer longer-term full service accommodations compared to a traditional hotel.\r\n</p><p><a href=\"https://en.wikipedia.org/wiki/Timeshare\" title=\"Timeshare\">Timeshare</a> and <a href=\"https://en.wikipedia.org/wiki/Destination_clubs\" class=\"mw-redirect\" title=\"Destination clubs\">destination clubs</a> are a form of property ownership involving ownership of an individual unit of accommodation for seasonal usage. A <a href=\"https://en.wikipedia.org/wiki/Motel\" title=\"Motel\">motel</a> is a small-sized low-rise lodging with direct access to individual rooms from the car park. <a href=\"https://en.wikipedia.org/wiki/Boutique_hotel\" title=\"Boutique hotel\">Boutique hotels</a>\r\n are typically hotels with a unique environment or intimate setting. A \r\nnumber of hotels have entered the public consciousness through popular \r\nculture, such as the <a href=\"https://en.wikipedia.org/wiki/The_Ritz_London_Hotel\" class=\"mw-redirect\" title=\"The Ritz London Hotel\">Ritz Hotel</a> in <a href=\"https://en.wikipedia.org/wiki/London\" title=\"London\">London</a>. Some hotels are built specifically as a destination in itself, for example at <a href=\"https://en.wikipedia.org/wiki/Casino\" title=\"Casino\">casinos</a> and holiday <a href=\"https://en.wikipedia.org/wiki/Resort\" title=\"Resort\">resorts</a>.\r\n</p><p>Most hotel establishments are run by a <a href=\"https://en.wikipedia.org/wiki/General_Manager\" class=\"mw-redirect\" title=\"General Manager\">General Manager</a> who serves as the head executive (often referred to as the \"<a href=\"https://en.wikipedia.org/wiki/Hotel_manager\" title=\"Hotel manager\">Hotel Manager</a>\"), department heads who oversee various departments within a hotel (e.g., food service), <a href=\"https://en.wikipedia.org/wiki/Middle_manager\" class=\"mw-redirect\" title=\"Middle manager\">middle managers</a>, <a href=\"https://en.wikipedia.org/wiki/Administration_of_business\" class=\"mw-redirect\" title=\"Administration of business\">administrative</a>\r\n staff, and line-level supervisors. The organizational chart and volume \r\nof job positions and hierarchy varies by hotel size, function and class,\r\n and is often determined by hotel ownership and managing companies.\r\n</p>",
+        "date": "2020-02-16T04:52:57.674Z"
+    }
+},
+{
+    "model": "home.blog",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "avatar": "blog/people-standing-inside-clear-glass-panel-3700252.jpg",
+        "title": "A Brief History of Coworking Space",
+        "content": "<p><b>Coworking</b> is an arrangement in which several workers from \r\ndifferent companies share an office space, allowing cost savings and \r\nconvenience through the use of common infrastructure, such as equipment,\r\n utilities, and receptionist and custodial services, and in some cases<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-1\">[1]</a></sup> refreshments and parcel acceptance services. It is attractive to <a href=\"https://en.wikipedia.org/wiki/Independent_contractor\" title=\"Independent contractor\">independent contractors</a>, <a href=\"https://en.wikipedia.org/wiki/Independent_scientist\" title=\"Independent scientist\">independent scientists</a>, <a href=\"https://en.wikipedia.org/wiki/Telecommuting\" title=\"Telecommuting\">telecommuting</a> and work-at-home professionals, and people who travel frequently. Additionally, coworking helps workers avoid the <a href=\"https://en.wikipedia.org/wiki/Social_isolation\" title=\"Social isolation\">isolation</a> they may experience while telecommuting, traveling, or working at home,<sup id=\"cite_ref-2\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-2\">[2]</a></sup> while also eliminating distractions. Some coworking spaces charge membership dues.\r\n</p><p>Between 2006 and 2015, a few studies have shown the number of \r\ncoworking spaces and available seats have roughly doubled each year.<sup id=\"cite_ref-14\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-14\">[14]</a></sup>\r\n</p><p>Co-Working was first conceptualized by <a href=\"https://en.wikipedia.org/wiki/Sunshine_Suites\" title=\"Sunshine Suites\">Sunshine Suites</a>.\r\n  The company opened its doors in October 2001, founded by Cheni \r\nYerushalmi and Joe Raby.  From the beginning, the idea of community was \r\ncentral to Sunshine's efforts. It arranged ski trips and upstate hikes \r\nand negotiated group discounts on gym memberships, car rentals, and \r\nhealth insurance. Eventually, Sunshine bought a cabin in Vermont for use\r\n as a corporate retreat, and started a softball team.<sup id=\"cite_ref-15\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-15\">[15]</a></sup>\r\n\u201cIt was a lot more than an office space,\u201d Yerushalmi recalls. \u201cEverybody\r\n knew everybody. It was a really special place.\u201d If someone fell behind \r\non their payments, for instance, instead of evicting them, the founders \r\nworked the phones, drumming up a business to help the struggling company\r\n get back on its feet, as the New York Times noted in a profile of the \r\ncompany in 2004.<sup id=\"cite_ref-16\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-16\">[16]</a></sup>\r\n</p><p>Coworking, as we experience it today, was preceded by European \r\nhacker spaces of the 1990s, where programmers would exchange skills and \r\nbest practices.<sup id=\"cite_ref-17\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-17\">[17]</a></sup>\r\n</p><p>Some coworking places<sup id=\"cite_ref-18\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-18\">[18]</a></sup> were developed by nomadic Internet <a href=\"https://en.wikipedia.org/wiki/Entrepreneurship\" title=\"Entrepreneurship\">entrepreneurs</a> seeking an alternative to working in <a href=\"https://en.wikipedia.org/wiki/Coffeehouse\" title=\"Coffeehouse\">coffee shops</a> and cafes, or to isolation in independent or home offices.<sup id=\"cite_ref-19\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-19\">[19]</a></sup>\r\nA 2007 survey showed many employees worry about feeling isolated and losing human interaction if they were to <a href=\"https://en.wikipedia.org/wiki/Telecommuting\" title=\"Telecommuting\">telecommute</a>.\r\n Roughly a third of private-sector and public-sector workers also \r\nreported that they did not want to stay at home during work. Another \r\nmajor factor that drives demand for coworking is the growing role of \r\nindependent workers.<sup id=\"cite_ref-20\" class=\"reference\"><a href=\"https://en.wikipedia.org/wiki/Coworking#cite_note-20\">[20]</a></sup>\r\n</p>",
+        "date": "2020-02-16T05:07:08.197Z"
+    }
+},
+{
+    "model": "home.blog",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "avatar": "blog/park-historical-castle-fountain-87378_2UWODBi.jpg",
+        "title": "Villa According to Wikipedia",
+        "content": "<p>A <b>villa</b> is a type of house that was originally an <a href=\"https://en.wikipedia.org/wiki/Ancient_Rome\" title=\"Ancient Rome\">ancient Roman</a> <a href=\"https://en.wikipedia.org/wiki/Upper-class\" class=\"mw-redirect\" title=\"Upper-class\">upper-class</a> country house. Since its origins in the <a href=\"https://en.wikipedia.org/wiki/Roman_villa\" title=\"Roman villa\">Roman villa</a>, the idea and function of a villa has evolved considerably.  After the fall of the <a href=\"https://en.wikipedia.org/wiki/Roman_Republic\" title=\"Roman Republic\">Roman Republic</a>, villas became small farming compounds, which were increasingly fortified in <a href=\"https://en.wikipedia.org/wiki/Late_Antiquity\" class=\"mw-redirect\" title=\"Late Antiquity\">Late Antiquity</a>, sometimes transferred to the Church for reuse as a <a href=\"https://en.wikipedia.org/wiki/Monastery\" title=\"Monastery\">monastery</a>. Then they gradually re-evolved through the <a href=\"https://en.wikipedia.org/wiki/Middle_Ages\" title=\"Middle Ages\">Middle Ages</a>\r\n into elegant upper-class country homes.  In modern parlance, \"villa\" \r\ncan refer to various types and sizes of residences, ranging from the <a href=\"https://en.wikipedia.org/wiki/Suburb\" title=\"Suburb\">suburban</a> <a href=\"https://en.wikipedia.org/wiki/Semi-detached\" title=\"Semi-detached\">semi-detached</a> double villa to residences in the <a href=\"https://en.wikipedia.org/wiki/Wildland%E2%80%93urban_interface\" title=\"Wildland\u2013urban interface\">wildland\u2013urban interface</a>.\r\n</p>",
+        "date": "2020-02-16T05:10:27.063Z"
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 105,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "1",
+        "date": "2020-03-08T04:26:37.071Z",
+        "blog": 1,
+        "parent": 0,
+        "main": 0
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 106,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\njajaja",
+        "date": "2020-03-08T04:29:52.006Z",
+        "blog": 1,
+        "parent": 105,
+        "main": 105
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 107,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\nok",
+        "date": "2020-03-08T04:31:00.316Z",
+        "blog": 1,
+        "parent": 106,
+        "main": 105
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 108,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\nnani",
+        "date": "2020-03-08T04:31:36.913Z",
+        "blog": 1,
+        "parent": 107,
+        "main": 105
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 109,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "opo",
+        "date": "2020-03-08T04:31:41.085Z",
+        "blog": 1,
+        "parent": 0,
+        "main": 0
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 110,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\nrapopo",
+        "date": "2020-03-08T04:31:45.709Z",
+        "blog": 1,
+        "parent": 109,
+        "main": 109
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 111,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "ok",
+        "date": "2020-03-08T04:40:23.485Z",
+        "blog": 1,
+        "parent": 0,
+        "main": 0
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 112,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\njos",
+        "date": "2020-03-08T04:40:26.944Z",
+        "blog": 1,
+        "parent": 111,
+        "main": 111
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 113,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\ntop",
+        "date": "2020-03-08T04:40:35.904Z",
+        "blog": 1,
+        "parent": 112,
+        "main": 111
+    }
+},
+{
+    "model": "home.comment",
+    "pk": 114,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "@aksa\r\nwoke",
+        "date": "2020-03-08T04:45:39.104Z",
+        "blog": 1,
+        "parent": 113,
+        "main": 111
+    }
+},
+{
+    "model": "home.review",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "subidab X"
+        ],
+        "content": "All your fate belongs to me !",
+        "career": "CEO of Myself",
+        "star": 5
+    }
+},
+{
+    "model": "home.review",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "second review",
+        "career": "CEO of Weebsite",
+        "star": 5
+    }
+},
+{
+    "model": "home.review",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "aksa"
+        ],
+        "content": "third review",
+        "career": "nobody",
+        "star": 4
+    }
+},
+{
+    "model": "home.about",
+    "pk": 1,
+    "fields": {
+        "about_us": "<p>about about about <i><u>EDITED</u></i><br></p><ul><li>list</li><li>list2</li><li>list3<br></li></ul>",
+        "our_quality": "<p>quality quality quality <u><i>EDITED</i></u><br></p><ol><li>num</li><li>num2</li><li>num3<br></li></ol>",
+        "image": "about/white-house-129112.jpg",
+        "selected_review": [
+            2
+        ]
+    }
+},
+{
+    "model": "home.contactmail",
+    "pk": 7,
+    "fields": {
+        "name": "aka",
+        "email": "aka@mail.com",
+        "content": "badumtess"
+    }
+},
+{
+    "model": "home.contactmail",
+    "pk": 8,
+    "fields": {
+        "name": "gil",
+        "email": "gil@mail.com",
+        "content": "wkwkwkwk"
+    }
+},
+{
+    "model": "home.contactmail",
+    "pk": 9,
+    "fields": {
+        "name": "astral",
+        "email": "astral@mail.com",
+        "content": "burst!"
+    }
+},
+{
+    "model": "home.contactmail",
+    "pk": 10,
+    "fields": {
+        "name": "ars",
+        "email": "arseilles@mail.com",
+        "content": "qewqweqwe"
+    }
+},
+{
+    "model": "home.propertymail",
+    "pk": 1,
+    "fields": {
+        "prop": 11,
+        "name": "xxx",
+        "email": "yyy@mail.com",
+        "content": "zzz"
+    }
+},
+{
+    "model": "home.propertymail",
+    "pk": 2,
+    "fields": {
+        "prop": 11,
+        "name": "ore wa",
+        "email": "anata@mail.com",
+        "content": "NANI NANI NANI"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-02-02T03:30:29.328Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Apartment",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2020-02-02T03:30:39.397Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Family Home",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2020-02-02T03:30:52.751Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Villa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2020-02-02T03:30:58.022Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Home",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2020-02-02T03:31:07.679Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "Office",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2020-02-02T05:03:45.348Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "object_id": "1",
+        "object_repr": "New York",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2020-02-02T05:04:36.803Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "object_id": "2",
+        "object_repr": "San Jose",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-02-02T05:04:49.052Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "object_id": "1",
+        "object_repr": "New York",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2020-02-02T05:05:26.345Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "object_id": "3",
+        "object_repr": "St Louis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2020-02-02T05:05:56.313Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "city"
+        ],
+        "object_id": "4",
+        "object_repr": "Florida",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2020-02-05T03:24:32.951Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "object_id": "1",
+        "object_repr": "For Rent",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2020-02-05T03:24:38.385Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "status"
+        ],
+        "object_id": "2",
+        "object_repr": "For Sale",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2020-02-05T03:27:18.215Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "object_id": "1",
+        "object_repr": "Property 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2020-02-05T03:29:13.227Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "object_id": "2",
+        "object_repr": "Bakpia Pathuk UMI",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2020-02-05T03:29:26.310Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "object_id": "1",
+        "object_repr": "Bakmi Pak Abu",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2020-02-05T04:21:09.598Z",
+        "user": [
+            "aksa"
+        ],
+        "content_type": [
+            "home",
+            "property"
+        ],
+        "object_id": "3",
+        "object_repr": "Create & Destroy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]

@@ -36,20 +36,20 @@ class CityForm(forms.Form):
     image = forms.ImageField(label="Image", widget=forms.FileInput(attrs={'class': "form-control-file"}))
 
 class PropertyForm(forms.Form):
-    city_options = []
-    cities = City.objects.all()
-    for c in cities:
-        city_options.append((c.id, c.name))
+    city_options = [1]
+    # cities = City.objects.all()
+    # for c in cities:
+    #     city_options.append((c.id, c.name))
 
-    status_options = []
-    status = Status.objects.all()
-    for s in status:
-        status_options.append((s.id, s.name))
+    status_options = [1]
+    # status = Status.objects.all()
+    # for s in status:
+    #     status_options.append((s.id, s.name))
 
-    category_options = []
-    categories = Category.objects.all()
-    for cat in categories:
-        category_options.append((cat.id, cat.name))
+    category_options = [1]
+    # categories = Category.objects.all()
+    # for cat in categories:
+    #     category_options.append((cat.id, cat.name))
 
     boolean_options = [(True, "Yes"), (False, "No")]
     
@@ -85,10 +85,10 @@ class ReviewForm(forms.Form):
 
 
 class AboutForm(forms.Form):
-    review_options = []
-    reviews = Review.objects.all()
-    for rev in reviews:
-        review_options.append((rev.id, rev.preview()))
+    review_options = [1]
+    # reviews = Review.objects.all()
+    # for rev in reviews:
+    #     review_options.append((rev.id, rev.preview()))
 
     about_us = forms.CharField(label="About us", widget=SummernoteWidget())
     image = forms.ImageField(label="Image", widget=forms.FileInput(attrs={'class': "form-control-file"}))
