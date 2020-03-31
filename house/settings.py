@@ -89,15 +89,16 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR, 'db_setting.cnf'),
-        },
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'OPTIONS': {
+        #     'read_default_file': os.path.join(BASE_DIR, 'db_setting.cnf'),
+        # },
         # database setting should be saved in a different file
-        # 'NAME': 'django_property_list',
-        # 'USER': 'root',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'property-list',
+        'USER': 'postgres',
+        'PASSWORD': 'aksa123',
+        'HOST': 'postgres://beojnhrtderdvu:de926fbc7fdaa452222510133aabe27e6b84fe97ebd0a16dacc9f7ed510d0347@ec2-184-72-235-80.compute-1.amazonaws.com:5432/d2um3mlk9qovtn',
         
     }
 }
@@ -150,3 +151,8 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 STATICFILES_DIRS = [
     ("city", os.path.join(BASE_DIR, "media\city"))
 ]
+
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())

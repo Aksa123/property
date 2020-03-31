@@ -73,17 +73,17 @@
 			<!-- for all listing -->
 		
 			{% if prev_page %}
-				<a class="page-button prev-page page-item" href="#aksa"><input type="hidden" value={{prev_page}}><i class="fa fa-angle-left"></i></a>
+				<a class="page-button prev-page page-item" ><input type="hidden" value={{prev_page}}><i class="fa fa-angle-left"></i></a>
 			{% endif %}
 			{% for i in page_list %}
 				{% if i == page %}
 					<span class="page-item">{{ page }}</span>
 				{% else %}
-					<a class="page-item" href="#aksa"><input type="hidden" value={{i}}>{{ i }}</a>
+					<a class="page-item" ><input type="hidden" value={{i}}>{{ i }}</a>
 				{% endif %}
 			{% endfor %}
 			{% if next_page %}
-				<a class="page-button next-page page-item" href="#aksa"><input type="hidden" value={{next_page}}><i class="fa fa-angle-right"></i></a>
+				<a class="page-button next-page page-item" ><input type="hidden" value={{next_page}}><i class="fa fa-angle-right"></i></a>
 				{% comment %} <a href="{% url 'browse' next_page %}"><i class="fa fa-angle-right"></i></a> {% endcomment %}
 			{% endif %}
 		
